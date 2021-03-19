@@ -44,7 +44,7 @@ Unpack: tar xvf hadoop-*
 Create a directory hadoop in opt and move the unpacked archive there, same as Spark.
 Edit the file etc/hadoop/hadoop-env.sh to define some parameters as follows:
 
-  # set to the root of your Java installation
+  set to the root of your Java installation
   export JAVA_HOME=/usr/java/latest
 To find JAVA_HOME: dirname $(dirname $(readlink -f $(which javac)))
 
