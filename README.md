@@ -14,7 +14,9 @@ Before downloading and setting up Spark, we need to install necessary dependenci
 Installing from the terminal with the command: 
 
 ```sudo apt install default-jdk scala git -y.```
+
 Verify installation with the following commands: 
+
 ```java -version; javac -version; scala -version; git --version.```
 
 Spark Installation:
