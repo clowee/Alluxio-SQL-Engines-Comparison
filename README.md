@@ -34,3 +34,27 @@ Check local host for Spark GUI: http://127.0.0.1:8080/
 Create 1 worker node: start-worker.sh spark://yourURL. Mine is spark://sergei-VivoBook-ASUSLaptop-X421IA-M433IA:7077 
 In order to run Spark Shell: /opt/spark/bin/spark-shell
 To shut the nodes down: stop-master.sh and stop-worker.sh
+
+Setting up an hdfs database:
+Getting SSH and PDHS. SSH is needed for Hadoop and PDSH for better ssh resource management.
+ sudo apt-get install ssh
+ sudo apt-get install pdsh
+Download Hadoop 2.7 from the Apache website: https://hadoop.apache.org/release/2.7.0.html.
+Unpack: tar xvf hadoop-*
+Create a directory hadoop in opt and move the unpacked archive there, same as Spark.
+Edit the file etc/hadoop/hadoop-env.sh to define some parameters as follows:
+
+  # set to the root of your Java installation
+  export JAVA_HOME=/usr/java/latest
+To find JAVA_HOME: dirname $(dirname $(readlink -f $(which javac)))
+
+do the following with the found directory:
+JAVA_HOME=your_java_path (mine was JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64)
+export JAVA_HOME
+
+
+Go to the Hadoop folder: /hadoop-2.7.0/bin and execute ./hadoop. The usage documentation will be shown.
+Installing curl also helps: sudo apt install curl -y
+
+
+
