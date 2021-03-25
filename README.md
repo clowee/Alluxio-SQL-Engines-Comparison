@@ -113,4 +113,20 @@ Installing curl also helps:
 ```sudo apt install curl -y```
 
 
+Intsalling and using the Star Schema Benchmark:
+
+```git clone git@github.com:vadimtk/ssb-dbgen.git
+   cd ssb-dbgen
+   make
+```
+
+Use the following to generate the tbl files.
+```./dbgen -s 1000 -T c
+   ./dbgen -s 1000 -T l
+   ./dbgen -s 1000 -T p
+   ./dbgen -s 1000 -T s
+   ./dbgen -s 1000 -T d
+```
+the size can be anywhere from 0.01 to 1000.
+
 
